@@ -1,0 +1,26 @@
+/*
+ * mcp251xfd_ff_config.h
+ *
+ * fifo and filter config
+ */
+
+#ifndef MCP251XFD_FF_CONFIG_H_
+#define MCP251XFD_FF_CONFIG_H_
+
+#include "MCP251XFD.h"
+
+#define TXFIFO	MCP251XFD_FIFO1
+#define RXFIFO	MCP251XFD_FIFO2
+
+#define MCP2518FD_EXT1_FIFO_COUNT 3	// 3 = 1 TEF + 1 TXFIFO + 1 RXFIFO
+
+extern MCP251XFD_RAMInfos Ext1_TEF_RAMInfos;
+extern MCP251XFD_RAMInfos Ext1_TXQ_RAMInfos;
+
+extern MCP251XFD_FIFO MCP2518FD_Ext1_FIFOlist[MCP2518FD_EXT1_FIFO_COUNT];
+
+#define MCP2518FD_EXT1_FILTER_COUNT 1
+
+extern MCP251XFD_Filter MCP2518FD_Ext1_FilterList[MCP2518FD_EXT1_FILTER_COUNT];
+
+#endif /* MCP251XFD_FF_CONFIG_H_ */
